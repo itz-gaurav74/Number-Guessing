@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Number guess Game</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <h2 id="title">Number Guessing Game</h2>
+    <h2 id="level-display"></h2>
+    <div class="levels">
+      <button class="beginner lvl-btn" id='10'>Beginner</button>
+      <button class="proficient lvl-btn" id='50'>Proficient</button>
+      <button class="expert lvl-btn" id='100'>Expert</button>
+    </div>
+
+    <div class="inputs">
+      <input type="text" name="" id="RandomNumInp" class="disable-btn" placeholder="Random Number" disabled>
+      <input type="number" name="" id="userInp" class="disable-user" placeholder="Guess A Number" disabled>
+    </div>
+
+    <div class="btns">
+      <button id="submitBtn">Check</button>
+      <button id="newGame">New Game</button>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" id="closeBtn">&times;</span>
+          <h2>Game Rules</h2>
+          <ol>
+            <li>First Select The Level: Beginner, Proficient, Expert.</li>
+            <li>Then Fill 'Guess A Number' Field.</li>
+            <li>And Click On Check Btn.</li>
+            <li>When The Random Number Meets You'r Guess, It Show The Winner</li>
+            <li>Levels--
+              <ul>
+                <li>Beginner: 10 </li>
+                <li>Proficient: 50 </li>
+                <li>Expert: 100 </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <button popovertarget='popup' id="popupBtn">Game Rule</button>
+      <!-- 
+      <button popovertarget="popup" id="popupBtn">Game Rules</button>
+      <p popover id="popup" class="popupDisplay">some data</p> -->
+
+    </div>
+    <div class="copywrite">
+      <h4>-- Gaurav.</h4>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

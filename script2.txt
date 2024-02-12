@@ -1,0 +1,22 @@
+let userInp = prompt('Enter A Number U Want To Be Guess Between 1 To ...')
+
+let generateNum = Math.floor(Math.random() * `${userInp}`) + 1;
+let guessNum = prompt(`Let Guess A Num 1 To ${userInp}`);
+console.log(`Generated Number Is: ${generateNum}`);
+
+while (true) {
+  if (guessNum == 'quit') {
+    console.log('Quitting The Game.');
+    break;
+  } else if (guessNum == generateNum) {
+    console.log('Guess Is Correct');
+    break;
+  } else if (guessNum > generateNum) {
+    console.log(`${guessNum} U'r Num Is Greater`);
+    guessNum = prompt(`Try Again... hint ! ${guessNum} U'r Num Is Greater`)
+  } else {
+    console.log(`${guessNum} U'r Num Is Smaller`)
+    guessNum = prompt(`Try Again... hint ! ${guessNum} U'r Num Is Smaller`)
+  }
+}
+

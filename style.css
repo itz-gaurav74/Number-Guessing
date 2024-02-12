@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 99vh;
+  width: 99vw;
+  background: #ADE7E3;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  height: 90vmin;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#title {
+  margin: 0 0 10vmin 0;
+  font-family: 'Kalam', cursive;
+  text-transform: uppercase;
+  font-size: 4vmin;
+}
+
+#level-display {
+  font-family: 'Protest Riot', sans-serif;
+  color: #22302C;
+  font-size: 4vmin;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 2vmin;
+}
+
+input {
+  height: 6vmin;
+  width: fit-content;
+  padding: 1vmin;
+  margin: 2vmin;
+  border-radius: 7px;
+  border: none;
+  background: #e0dcdc;
+  outline: none;
+  text-align: center;
+  font-size: 3vmin;
+  font-family: 'Caveat', cursive;
+  color: #111816;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+button {
+  background-color: #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  color: #fff;
+  cursor: pointer;
+  padding: 2vmin 3.5vmin;
+  margin: 1vmin;
+  font-size: 3vmin;
+  font-family: 'Alice', serif;
+}
+
+button:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+.lvl-btn {
+  box-shadow: rgb(114 213 206 / 40%) 0 2px 4px, rgb(114 213 206 / 30%) 0 7px 13px -3px, #52cbc3 0 -4px 0 inset;
+  font-size: 3vmin;
+  padding: 2vmin 2.5vmin;
+  margin: 2vmin;
+  background: #37beb5;
+  color: aqua;
+}
+
+.lvl-btn:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+:disabled {
+  background-color: #10b994;
+  color: #22302C;
+}
+
+/* Shale Effect */
+.userErr {
+  animation: shake 0.5s ease-in-out;
+  /* border: 2px solid crimson; */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Popup Structure */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.popup-content {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgb(255 254 254 / 17%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5vmin;
+}
+
+.popup-content h2 {
+  font-size: 3vmin;
+  font-family: 'Protest Riot', sans-serif;
+  font-weight: 600;
+  letter-spacing: .24vmin;
+}
+
+.close {
+  position: absolute;
+  top: 1vmin;
+  right: 2vmin;
+  font-size: 5vmin;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Popup Data */
+ol {
+  width: 75vmin;
+  letter-spacing: .05vmin;
+  line-height: 1.2;
+  font-family: 'Alice', serif;
+  font-size: 2.5vmin;
+}
+
+ol li {
+  text-align: start;
+  margin: 1vmin 0;
+}
+
+ol ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ol>li:last-child>ul {
+  font-size: 3vmin;
+  font-family: 'Protest Riot', sans-serif;
+  font-weight: 300;
+}
+
+/* Copywrite Style */
+.copywrite {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  width: 75vmin;
+  margin: 4vmin 0;
+}
+
+.copywrite h4 {
+  font-size: 2.7vmin;
+  font-family: 'Kalam', cursive;
+  font-weight: 400;
+}
