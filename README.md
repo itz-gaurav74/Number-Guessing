@@ -27,6 +27,7 @@ Welcome to the Number Guessing Game! This is a simple web-based game where playe
 2. Open the `index.html` file in your web browser.
 
 ## Preview
+<a href="https://itz-gaurav74.github.io/Number-Guessing/" target="_blank">Demo</a>
 
 ![image](https://github.com/itz-gaurav74/Number-Guessing/assets/116722012/5f810f14-7ae1-4382-94b9-384b8c740085)
 
